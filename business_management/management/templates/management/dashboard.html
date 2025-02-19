@@ -1,0 +1,39 @@
+{% extends "management/base.html" %}
+{% block title %}Dashboard - Business Management{% endblock %}
+
+{% block content %}
+<h2>Dashboard</h2>
+<div class="cards">
+    <div class="card">
+        <h3>Total Clients</h3>
+        <p>{{ clients.count }}</p>
+        <i class="fas fa-users"></i>
+    </div>
+    <div class="card">
+        <h3>Total Revenue</h3>
+        <p>Ksh.{{ total_revenue }}</p>
+        <i class="fas fa-dollar-sign"></i>
+    </div>
+    <div class="card">
+        <h3>Orders</h3>
+        <p>{{ orders.count }}</p>
+        <i class="fas fa-shopping-cart"></i>
+    </div>
+    <div class="card">
+        <h3>Pending Tasks</h3>
+        <p>{{ tasks.count }}</p>
+        <i class="fas fa-tasks"></i>
+    </div>
+</div>
+
+<div class="charts">
+    <div class="chart">
+        <h3>Sales Overview</h3>
+        <canvas id="salesChart"></canvas>
+    </div>
+    <div class="chart">
+        <h3>Client Growth</h3>
+        <canvas id="clientChart"></canvas>
+    </div>
+</div>
+{% endblock %}

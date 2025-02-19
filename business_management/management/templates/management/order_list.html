@@ -1,0 +1,39 @@
+{% extends "management/base.html" %}
+{% block title %}Orders - Business Management{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Orders</h2>
+    <a href="{% url 'order_create' %}" class="btn btn-primary">Create New Order</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Client</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+            <tr>
+                <td>{{ order.id }}</td>
+                <td>{{ order.client.name }}</td>
+                <td>{{ order.product.name }}</td>
+                <td>{{ order.quantity }}</td>
+                <td>${{ order.total_price }}</td>
+                <td>{{ order.status }}</td>
+                <td>
+                    <a href="{% url 'order_detail' order.id %}" class="btn btn-info">View</a>
+                    <a href="{% url 'order_update' order.id %}" class="btn btn-warning">Edit</a>
+                    <a href="{% url 'order_delete' order.id %}" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

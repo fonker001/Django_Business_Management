@@ -1,0 +1,15 @@
+{% extends "management/base.html" %}
+{% block title %}Client Detail - Business Management{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Client Details</h2>
+    <p><strong>Name:</strong> {{ client.name }}</p>
+    <p><strong>Email:</strong> {{ client.email }}</p>
+    <p><strong>Phone:</strong> {{ client.phone }}</p>
+    <p><strong>Address:</strong> {{ client.address }}</p>
+    <a href="{% url 'client_update' client.id %}" class="btn btn-warning">Edit</a>
+    <a href="{% url 'client_delete' client.id %}" class="btn btn-danger">Delete</a>
+    <a href="{% url 'client_list' %}" class="btn btn-secondary">Back to List</a>
+</div>
+{% endblock %}

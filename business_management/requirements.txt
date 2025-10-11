@@ -22,13 +22,6 @@ h11==0.14.0
 httpcore==1.0.7
 httplib2==0.22.0
 httpx==0.28.1
-idna==3.10
-itsdangerous==2.2.0
-Jinja2==3.1.5
-kiwisolver==1.4.7
-kombu==5.4.2
-markdown-it-py==3.0.0
-MarkupSafe==3.0.2
 matplotlib==3.9.2
 mdurl==0.1.2
 oauthlib==3.2.2
@@ -37,9 +30,6 @@ ordered-set==4.1.0
 packaging==24.1
 pillow==10.4.0
 platformdirs==4.2.2
-prompt_toolkit==3.0.48
-proto-plus==1.24.0
-protobuf==5.28.2
 psycopg2==2.9.9
 psycopg2-binary==2.9.10
 pyasn1==0.6.1
@@ -65,3 +55,5 @@ tzdata==2024.1
 uritemplate==4.1.1
 urllib3==2.2.3
 vine==5.1.0
+gunicorn==21.2.0
+whitenoise==6.6.0

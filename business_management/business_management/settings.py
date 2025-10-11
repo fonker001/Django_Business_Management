@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-j*bbqt!cg#@c&+mk#3le*+*qowca*4jceqrvwp3y%-%uo(3g$f
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['fonkertech.co.ke','www.fonkertech.co.ke','django-business-management.onrender.com']
+ALLOWED_HOSTS = ['django-business-management.onrender.com']
 
 
 # Application definition
